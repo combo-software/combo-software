@@ -1,0 +1,12 @@
+.content{
+    min-height:50vh;
+}
+
+ngui-map{
+    height:50vh;
+}
+
+.social{
+    max-height:4.5em;
+    padding-bottom:1em;
+}

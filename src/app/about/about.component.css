@@ -1,0 +1,14 @@
+h1 {
+    z-index:1000;
+}
+
+.profile{
+    max-height: 50vh;
+}
+
+@media(min-width: 576px){
+    .profile{
+        max-height: 20em;
+    }
+}
+

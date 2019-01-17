@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/home">
+      <img src="../assets/combologosm.png" height="30" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse">
+      <div class="navbar-nav navbar-dark bg-dark px-2">
+        <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="isCollapsed = true">Home</a>
+        <a class="nav-item nav-link" routerLink="/projects" routerLinkActive="active" (click)="isCollapsed = true">Projects</a>
+        <a class="nav-item nav-link" routerLink="/about" routerLinkActive="active" (click)="isCollapsed = true">About</a>
+        <a class="nav-item nav-link" routerLink="/contact" routerLinkActive="active" (click)="isCollapsed = true">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div id="toppad">
+  <router-outlet></router-outlet>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col" id="footer">
+      &copy; Combo Software 2019
+      </div>
+    </div>
+  </div>
+</footer>

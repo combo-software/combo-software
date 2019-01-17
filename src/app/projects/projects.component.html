@@ -1,0 +1,20 @@
+<div class="featurette content d-flex justify-content-center align-items-center" *ngFor="let project of projects" [ngClass]="project.id % 2 == 0 ? '': 'alternate'" id="{{project.name}}">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<img src="../../assets/screenshots/{{project.image1}}" class="img-fluid project" (click)="goToDetail(project.slug)"/>
+			</div>
+			<div class="col-md-4">
+				<h2>{{project.name}}</h2>
+				<p class="lead" [innerHTML]="project.description"></p>
+				<div *ngIf="project.link">
+					<div *ngIf="project.type == 'Website'; then website else game"></div>
+					<ng-template #website><a href="{{project.link}}"><button class="btn btn-lg">Visit {{project.name}}</button></a></ng-template>
+					<ng-template #game><a href="{{project.link}}"><button class="btn btn-lg">Play {{project.name}}</button></a></ng-template>
+				</div>
+				<p class="py-2" *ngIf="project.gitLink"><a href="{{project.gitLink}}"><button class="btn btn-sm">View on GitHub</button></a></p>
+			</div>
+		</div>
+	</div>
+	<div *ngIf="project == projects[0]" class="gradientback"></div>
+</div>

@@ -1,0 +1,68 @@
+/*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+.vidup {
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  left: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+.leadPic {
+    max-width:65%
+}
+
+@media(min-height:450px) {
+    .leadPic {
+        max-width:100%
+    }
+}
+
+.sel {
+    max-height:18em;
+    cursor:pointer;
+}
+
+@media (min-width: 576px) {
+    .sel {
+        max-height:24em;
+    }
+}
+
+@media (min-width: 768px) {
+    .sel{
+        max-height:35em;
+    }
+}
+
+.bd-booticon.outline {
+    border: 1px solid #cdbfe3;
+}
+
+.bd-booticon {
+    display: inline-block;
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 3.25rem;
+    line-height: 4.5rem;
+    color: #fff;
+    text-align: center;
+    background-color: #563d7c;
+    border-radius: 15%;
+}
+
+.logoIcon {
+    max-height: 4.5rem;
+}
+
+.trimmer {
+    padding: 1em;
+}
